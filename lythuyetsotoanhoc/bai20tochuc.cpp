@@ -3,8 +3,8 @@
 using namespace std;
 int main(){
 	// kiem tra so chinh phuong su dung ham sqrt khai can
-	// neu nhu can * can == n co nghia la ph?n du khi tinh can la 0 thi nhan l?i s? la s? chinh phuong
-	// con n?u khai can co ph?n l? d?ng sau nhan l?i khong b?ng s? n thi khong ph?i s? chinh phuong
+	// neu nhu can * can == n có nghĩa là phần dư khi tính căn là 0 thì nhân lại sẽ la số chính phương
+	// còn nếu khai can có phần lẻ đằng sau nhân lại không bằng số n thì không phải số chính phương
 	long long  n ;
 	cin >> n;
 	long long can = sqrt(n);
