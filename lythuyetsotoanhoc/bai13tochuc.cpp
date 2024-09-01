@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 // công thức leggendry
+// phan tich tsnt trong n!
 long long bac(long long  n , long long p ){
 	long long dem = 0;
 	for(long long i = p ; i <= n ; i *= p){
