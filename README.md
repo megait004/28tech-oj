@@ -23,3 +23,9 @@
   -  pow(10,n-1); // số nhỏ nhất có n chữ số
   -  pow(10,n) - 1; // so lon nhat co n chu so
   -  ((a + b - 1) / b) * b ; // số nhỏ nhất >= a , và chia hết cho b
+# Công thức Lũy Thừa Nhị Phân Sử Dụng Đệ Quy
+  -  Ở đây bài toán con nhỏ nhất khi n = 0 thì thì ta có an = 1
+
+  -  Ngược lại bạn có thể tính an thông qua an/2 ,
+  -  nếu n chẵn thì an = an/2 * an/2 ví dụ 210 = 25 * 25.
+  -  Nếu n lẻ thì an = an/2 * an/2 * a ví dụ 210 = 25 * 25*21
