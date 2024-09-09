@@ -19,3 +19,7 @@
   - p = 2 là số nguyên tố, và 22 - 1 cũng là số nguyên tố nên : 22-1 * (22 - 1) = 6 là số hoàn hảo
 
   - p = 3 là số nguyên tố, và 23 - 1 cũng là số nguyên tố nên : 23-1 * (23 - 1) = 4 * 7 = 28 là số hoàn hảo
+# Công thức tìm sô nhỏ nhất có n chữ số và số lớn nhất có n chữ số
+  -  pow(10,n-1); // số nhỏ nhất có n chữ số
+  -  pow(10,n) - 1; // so lon nhat co n chu so
+  -  ((a + b - 1) / b) * b ; // số nhỏ nhất >= a , và chia hết cho b
