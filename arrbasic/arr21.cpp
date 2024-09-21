@@ -1,24 +1,31 @@
 #include<iostream>
+#include<vector>
+#include<iterator>
+// khai báo 1 mảng đánh dấu đủ lớn
+long long mark[1000001];
 using namespace std;
-// muốn chèn ta phải khai báo mảng có kích thước to hơn giới hạn đề bài cho
-int arr[10001];
 int main(){
-	int n ;cin >> n ;
-	int x , k ;
-	cin >> x >> k;
-	for(int i = 0 ; i < n ; i++){
-		cin >> arr[i];
+	int n ; cin >> n ;
+	vector<int> v(n);
+	// duyệt để nhập vector
+	for(int i = 0 ; i < n ; i ++){
+		cin >> v[i];
 	}
-	// vì k bắt đầu từ 1 nên vị trí thứ k phải giảm đi 1 vì chỉ số index của mảng bắt đầu từ 0
-	k = k - 1;
-	// Dịch các phần tử từ chỉ số K tới chỉ số N - 1 trong mảng sang phải 1 phần tử, việc dịch sẽ được thực hiện từ phải sang trái. 
-	 for(int i = n - 1; i >= k; i--){
-        arr[i + 1] = arr[i];
-    }
-    arr[k] = x;
-    ++n;
-	for(int i = 0 ; i < n ; i++){
-		cout << arr[i] << " ";
+	// duyệt vector
+	for(int i = 0 ; i < v.size();i++){
+		// mark[v[i]]++ có nghĩa là ta lấy giá trị ở trong mảng v làm chỉ số của mảng đánh dấu
+		// duyệt nó trong mảng mark là để xem giá trị trong mảng v xuất hiện bao nhiều lần trong mảng mark
+		mark[v[i]]++;
 	}
-	return 0;
+	// tạo 1 biến đếm để lưu sự xuất hiện của các số khác nhau
+	long long  dem = 0 ;
+	for(int i = 0 ; i <= 1000001 ; i ++){
+		// ở đây kiểm tra mark[i] khác 0 nghĩa là kiểm tra cái chỉ số của mảng mark xem cái nào khác 0 thì ta sẽ tăng biến đếm 
+		// cụ thể là mảng mark[3] => index : 									0 ,1 ,2 ,3
+// giá trị trong mảng mark: ở vòng for trên ta xe biết nó đã xuát hiện chưa		1  1  0  1    => có 3 phần tử khác nhau
+		if(mark[i] != 0){
+			dem++;
+		}
+	}
+	cout << dem ;
 }
