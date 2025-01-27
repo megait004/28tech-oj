@@ -29,3 +29,10 @@
   -  Ngược lại bạn có thể tính an thông qua an/2 ,
   -  nếu n chẵn thì an = an/2 * an/2 ví dụ 210 = 25 * 25.
   -  Nếu n lẻ thì an = an/2 * an/2 * a ví dụ 210 = 25 * 25*21
+# Các hàm vector
+  - Với vector V bạn có thể dùng hàm "max_element" để tìm phần tử lớn nhất, "min_element" để tìm phần tử nhỏ nhất, "accumulate" để tính tổng.
+~~~
+cout << *max_element(v.begin(), v.end());
+cout << *min_element(v.begin(), v.end());
+cout << accumulate(v.begin(), v.end(), 0);
+~~~
