@@ -2,15 +2,22 @@
 using namespace std;
 int main(){
 	string s ; 
-	cin >> s ;
-	sort(s.begin() , s.end());
-	for(int i = 0 ; i < s.size() ; i++){
-		cout << s[i];
+	getline(cin , s);
+	stringstream ss(s) ;
+	string tmp ;
+	vector<string> v; 
+	while(ss >> tmp){
+		v.push_back(tmp);
+		
+	}
+	sort(v.begin() , v.end());
+	for(auto it : v){
+		cout << it << " ";
 	}
 	cout << endl;
-	reverse(s.begin() , s.end());
-	for(int i = 0 ; i < s.size() ; i++ ){
-		cout << s[i];
+	reverse(v.begin() , v.end());
+	for(auto it : v){
+		cout << it << " ";
 	}
 	return 0 ;
 }
