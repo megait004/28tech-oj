@@ -1,23 +1,22 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
-void ltor(long long n){
-    if(n != 0){
-        ltor(n / 10);
-        cout << n % 10 << ' ';
+bool isPrime(int n){
+    if(n < 2 ) return false;
+    else {
+        for (int i = 2 ; i <= sqrt(n) ; i ++){
+            if(n % i == 0){
+                return false;
+            }
+        }
     }
+    return true;
 }
-
-void rtol(long long n){
-    if(n != 0){
-        cout << n % 10 << ' ';
-        rtol(n / 10);
+int main()
+{
+    int n ; cin >> n ;
+    if(isPrime(n)){
+        cout << "true";
     }
-}
-
-int main(){
-    long long n; cin >> n;
-    ltor(n);
-    cout << endl;
-    rtol(n);
+    else cout << "false";
+    return 0 ;
 }

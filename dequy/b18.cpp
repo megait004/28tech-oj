@@ -23,3 +23,4 @@ int main() {
     cout << tongChan(n) << " " << tongLe(n) << endl; 
     return 0;
 }
+      
